@@ -1,0 +1,87 @@
+.burger
+    position: fixed
+    top: 30px
+    right: 10%
+    height: 27px
+    width: 30px
+    cursor: pointer
+    z-index: 100
+    -webkit-transition: opacity .25s ease
+    transition: opacity .25s ease
+    &:hover
+        opacity: 1
+
+    &.burgerActive
+        .top
+            -webkit-transform: translateY(11px) translateX(0) rotate(45deg)
+            -ms-transform: translateY(11px) translateX(0) rotate(45deg)
+            transform: translateY(11px) translateX(0) rotate(45deg)
+        .mid
+            opacity: 0
+        .last
+            -webkit-transform: translateY(-11px) translateX(0) rotate(-45deg)
+            -ms-transform: translateY(-11px) translateX(0) rotate(-45deg)
+            transform: translateY(-11px) translateX(0) rotate(-45deg)
+    span 
+        background: $orange
+        border: none
+        height: 3px
+        width: 100%
+        position: absolute
+        top: 0
+        left: 0
+        -webkit-transition: all .35s ease
+        transition: all .35s ease
+        cursor: pointer
+    .mid
+        top: 11px
+        width: 60%
+    .last
+        top: 22px
+.navItems
+    top: 0
+    left: 0
+    right: 0
+    position: fixed
+    background: $black
+    list-style: none
+    height: 100vh
+    padding: 50px 0
+    width: 100%
+    display: flex
+    flex-direction: column
+    justify-content: space-around
+    align-items: center
+    text-align: center
+    transition: all .7s ease-out
+    -webkit-transition: all .7s ease-out
+    transform: translateY(-100%)
+    z-index: 10
+    &.navOpen
+        transform: translateX(0)
+    .navItem
+
+        a
+            color: $white
+            font-weight: 200
+            letter-spacing: 3px
+            text-transform: uppercase
+            font-size: 1.2em
+            padding: 15px
+            &:hover
+                text-decoration: none
+                &:before, &:after 
+                    background-color: $orange
+                    content: ""
+                    display: inline-block
+                    height: 3px
+                    position: relative
+                    vertical-align: middle !important
+                    width: 15%
+                &:before
+                    right: 0.5em
+                    margin-left: -50%
+                &:after 
+                    left: 0.5em
+                    margin-right: -50%
+

@@ -1,0 +1,369 @@
+body::-webkit-scrollbar {
+  width: 0.5em; }
+body::-webkit-scrollbar-track {
+  -webkit-box-shadow: inset 0 0 6px #34403F; }
+body::-webkit-scrollbar-thumb {
+  background-color: #F27329;
+  outline: 1px solid #F2F2F2;
+  border-radius: 10px; }
+
+.cursor,
+.cursor2,
+.cursor3 {
+  position: fixed;
+  border-radius: 50%;
+  transform: translateX(-50%) translateY(-50%);
+  pointer-events: none;
+  left: -100px;
+  top: 50%;
+  mix-blend-mode: difference; }
+
+.cursor {
+  background-color: #fff;
+  height: 0;
+  width: 0;
+  z-index: 99999; }
+
+.cursor2, .cursor3 {
+  height: 36px;
+  width: 36px;
+  z-index: 99998;
+  -webkit-transition: all 0.3s ease-out;
+  transition: all 0.3s ease-out; }
+
+.cursor2.hover,
+.cursor3.hover {
+  -webkit-transform: scale(2) translateX(-25%) translateY(-25%);
+  transform: scale(2) translateX(-25%) translateY(-25%);
+  border: none; }
+
+.cursor2 {
+  border: 2px solid #fff;
+  box-shadow: 0 0 12px rgba(255, 255, 255, 0.2); }
+
+.cursor2.hover {
+  background: white;
+  box-shadow: 0 0 0 rgba(255, 255, 255, 0.2); }
+
+.sectionTitle {
+  margin-top: 45px;
+  text-align: center;
+  color: #F2F2F2;
+  padding: 35px 0;
+  max-width: 100%; }
+  .sectionTitle .secTitle {
+    font-weight: 400;
+    font-size: 2em;
+    text-transform: uppercase;
+    letter-spacing: 2px; }
+    .sectionTitle .secTitle:before, .sectionTitle .secTitle:after {
+      background-color: #F27329;
+      content: "";
+      display: inline-block;
+      height: 3px;
+      position: relative;
+      vertical-align: middle !important;
+      width: 5%; }
+    .sectionTitle .secTitle:before {
+      right: 0.5em;
+      margin-left: -50%; }
+    .sectionTitle .secTitle:after {
+      left: 0.5em;
+      margin-right: -50%; }
+
+.secSubTitle {
+  color: #F27329;
+  font-family: "Muli", sans-serif;
+  font-size: 1.5em;
+  font-weight: 200;
+  letter-spacing: 3px;
+  padding: 20px 0;
+  margin: 20px 0; }
+
+.orange {
+  color: #F27329; }
+
+.black {
+  color: #1C2126; }
+
+.white {
+  color: #F2F2F2; }
+
+.dark {
+  color: #34403F; }
+
+.col3Icon {
+  font-size: 100px; }
+
+.contentCenter {
+  font-family: "Muli", sans-serif;
+  color: #F2F2F2;
+  font-weight: 200;
+  font-size: 1.2em;
+  letter-spacing: 2px;
+  line-height: 1.7;
+  text-align: center; }
+
+.smallOnly {
+  display: none; }
+
+html, body {
+  margin: 0;
+  padding: 0;
+  background: #1C2126; }
+
+.burger {
+  position: fixed;
+  top: 30px;
+  right: 10%;
+  height: 27px;
+  width: 30px;
+  cursor: pointer;
+  z-index: 100;
+  -webkit-transition: opacity 0.25s ease;
+  transition: opacity 0.25s ease; }
+  .burger:hover {
+    opacity: 1; }
+  .burger.burgerActive .top {
+    -webkit-transform: translateY(11px) translateX(0) rotate(45deg);
+    -ms-transform: translateY(11px) translateX(0) rotate(45deg);
+    transform: translateY(11px) translateX(0) rotate(45deg); }
+  .burger.burgerActive .mid {
+    opacity: 0; }
+  .burger.burgerActive .last {
+    -webkit-transform: translateY(-11px) translateX(0) rotate(-45deg);
+    -ms-transform: translateY(-11px) translateX(0) rotate(-45deg);
+    transform: translateY(-11px) translateX(0) rotate(-45deg); }
+  .burger span {
+    background: #F27329;
+    border: none;
+    height: 3px;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    -webkit-transition: all 0.35s ease;
+    transition: all 0.35s ease;
+    cursor: pointer; }
+  .burger .mid {
+    top: 11px;
+    width: 60%; }
+  .burger .last {
+    top: 22px; }
+
+.navItems {
+  top: 0;
+  left: 0;
+  right: 0;
+  position: fixed;
+  background: #1C2126;
+  list-style: none;
+  height: 100vh;
+  padding: 50px 0;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  text-align: center;
+  transition: all 0.7s ease-out;
+  -webkit-transition: all 0.7s ease-out;
+  transform: translateY(-100%);
+  z-index: 10; }
+  .navItems.navOpen {
+    transform: translateX(0); }
+  .navItems .navItem a {
+    color: #F2F2F2;
+    font-weight: 200;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    font-size: 1.2em;
+    padding: 15px; }
+    .navItems .navItem a:hover {
+      text-decoration: none; }
+      .navItems .navItem a:hover:before, .navItems .navItem a:hover:after {
+        background-color: #F27329;
+        content: "";
+        display: inline-block;
+        height: 3px;
+        position: relative;
+        vertical-align: middle !important;
+        width: 15%; }
+      .navItems .navItem a:hover:before {
+        right: 0.5em;
+        margin-left: -50%; }
+      .navItems .navItem a:hover:after {
+        left: 0.5em;
+        margin-right: -50%; }
+
+* {
+  box-sizing: border-box; }
+
+*, html, body {
+  margin: 0;
+  padding: 0; }
+
+#mainLand {
+  width: 100%;
+  height: 100vh; }
+
+.hmLandContent {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  font-family: "Muli", sans-serif;
+  color: #F2F2F2; }
+  .hmLandContent .landSlogan {
+    color: #F2F2F2;
+    font-weight: 800;
+    letter-spacing: 2.5px;
+    font-size: 1.8em; }
+  .hmLandContent article {
+    padding: 20px 0;
+    font-size: 1.3em;
+    font-weight: 200;
+    line-height: 1.9; }
+  .hmLandContent a {
+    text-decoration: none;
+    color: #F2F2F2;
+    transition: all 0.3s ease-out; }
+    .hmLandContent a:hover {
+      color: #F27329; }
+  .hmLandContent img {
+    width: auto;
+    max-height: 80vh;
+    object-fit: cover;
+    float: right; }
+  .hmLandContent .hireMe {
+    font-weight: 200;
+    font-size: 1em;
+    letter-spacing: 2px;
+    padding: 0 10px; }
+
+.services .service {
+  color: #F2F2F2;
+  text-transform: uppercase;
+  text-align: center;
+  font-family: "Muli", sans-serif;
+  font-weight: 200;
+  font-size: 0.8em;
+  letter-spacing: 3px;
+  border-radius: 10px;
+  box-shadow: 0px 0px 2px 0px #F27329;
+  padding: 40px 10px;
+  margin: 10px 0;
+  cursor: pointer;
+  transition: 0.3s all linear;
+  position: relative;
+  z-index: 1; }
+  .services .service:hover {
+    background: #F27329;
+    font-weight: 800;
+    transform: scale(1.1); }
+
+.wmExp {
+  padding: 60px 0 0 0;
+  text-align: center; }
+
+.iconwm i {
+  font-size: 5em; }
+
+.wmTitle {
+  font-size: 1.3em;
+  padding: 10px 0;
+  font-weight: 200;
+  letter-spacing: 2px; }
+  .wmTitle:after {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 47%;
+    margin: 10px auto;
+    width: 40%;
+    height: 3px;
+    background: #F27329; }
+
+.wmCont {
+  padding: 10px 0;
+  font-size: 1em;
+  font-weight: 200;
+  line-height: 1.8;
+  letter-spacing: 1.8px; }
+
+.shopLogo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  padding: 20px;
+  background: rgba(255, 255, 255, 0.7);
+  border-top: 25px solid #1C2126; }
+  .shopLogo img {
+    width: 100%;
+    height: auto;
+    transition: all 0.4s ease-out; }
+    .shopLogo img:hover {
+      transform: scale(1.2); }
+
+#filterButton {
+  text-align: center;
+  padding: 20px 0 50px 0; }
+
+.filterButton {
+  cursor: pointer;
+  background: transparent;
+  color: #F2F2F2;
+  border: none;
+  box-shadow: 0px 0px 2px 0px #F27329;
+  padding: 5px 8px;
+  border-radius: 5px;
+  margin: 0 5px;
+  font-family: "Muli", sans-serif;
+  font-weight: 200;
+  letter-spacing: 1.6px;
+  transition: 0.3s ease-in; }
+  .filterButton:hover {
+    box-shadow: 0px 0px 1px 1px #F27329; }
+  .filterButton:focus {
+    background: #F27329;
+    color: #F2F2F2;
+    border: none;
+    outline: none; }
+
+.filterColumn {
+  display: none; }
+
+.filterContent {
+  padding: 8px; }
+  .filterContent img {
+    width: 100%; }
+
+.showFilter {
+  display: block; }
+
+@media only screen and (max-width: 900px) {
+  .hmLand {
+    text-align: center; }
+    .hmLand .smallNone {
+      display: none; }
+    .hmLand .smallOnly {
+      display: flex;
+      width: 100%;
+      align-items: center;
+      justify-content: center;
+      padding: 20px 0; }
+      .hmLand .smallOnly img {
+        width: 40%;
+        height: auto;
+        border-radius: 50%; } }
+footer {
+  font-family: "Muli", sans-serif; }
+  footer .copyrighNote {
+    text-align: center;
+    color: #F27329;
+    font-weight: 200;
+    font-size: 1em; }
+
+/*# sourceMappingURL=maf.css.map */
