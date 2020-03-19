@@ -57,7 +57,6 @@ for (let i = 0; i < btns.length; i++) {
     this.className += " activeFilter";
   });
 }
-
 // Testimonial Gallery Interactivity
 var	testim = document.getElementById("testim"),
 		testimDots = Array.prototype.slice.call(document.getElementById("testim-dots").children),
