@@ -119,7 +119,7 @@ html, body {
   height: 27px;
   width: 30px;
   cursor: pointer;
-  z-index: 100;
+  z-index: 300;
   -webkit-transition: opacity 0.25s ease;
   transition: opacity 0.25s ease; }
   .burger:hover {
@@ -169,7 +169,7 @@ html, body {
   transition: all 0.7s ease-out;
   -webkit-transition: all 0.7s ease-out;
   transform: translateY(-100%);
-  z-index: 10; }
+  z-index: 250; }
   .navItems.navOpen {
     transform: translateX(0); }
   .navItems .navItem a {
@@ -360,9 +360,18 @@ html, body {
       .socialBar .socialList i:hover {
         transform: scale(1.5); }
 
-@media only screen and (max-width: 900px) {
+@media only screen and (max-width: 992px) {
   .hmLand {
-    text-align: center; }
+    text-align: center;
+    width: 100%; }
+    .hmLand .landSlogan {
+      font-size: 1.4em; }
+    .hmLand article {
+      font-size: 1em;
+      font-weight: 100; }
+    .hmLand .hireMe {
+      font-size: 0.7em;
+      font-weight: 400; }
     .hmLand .smallNone {
       display: none; }
     .hmLand .smallOnly {
@@ -376,6 +385,11 @@ html, body {
         height: auto;
         border-radius: 50%; }
 
+  .services {
+    padding: 0 40px; }
+    .services .service {
+      font-size: 0.7em; }
+
   footer {
     padding-bottom: 80px; }
 
@@ -383,10 +397,10 @@ html, body {
     bottom: 0;
     width: 100%;
     top: auto;
-    display: flex;
+    text-align: center;
     justify-content: space-around;
     background: #34403F;
-    z-index: 200; }
+    z-index: 80; }
     .socialBar .socialList .social {
       display: inline; } }
 footer {

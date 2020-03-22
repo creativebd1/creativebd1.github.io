@@ -165,9 +165,18 @@
             &:hover
                 transform: scale(1.5)
 // Responsiveness
-@media only screen and (max-width: 900px)
+@media only screen and (max-width: 992px)
     .hmLand
         text-align: center
+        width: 100%
+        .landSlogan
+            font-size: 1.4em
+        article
+            font-size: 1em
+            font-weight: 100
+        .hireMe
+            font-size: .7em
+            font-weight: 400
         .smallNone
             display: none
         .smallOnly
@@ -181,21 +190,23 @@
                 width: 40%
                 height: auto
                 border-radius: 50%
+    .services
+        padding: 0 40px
+        .service 
+            font-size: .7em
     footer 
         padding-bottom: 80px
     .socialBar
         bottom: 0
         width: 100%
         top: auto
-        display: flex
+        text-align: center
         justify-content: space-around
         background: $dark
-        z-index: 200
+        z-index: 80
         .socialList
-
             .social
                 display: inline
-                i 
                     
 
 // Mobile

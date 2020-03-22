@@ -166,8 +166,17 @@ window.onload = function() {
 		})
 }
 // Dynamic Date 
-let currentYear = new Date().getFullYear();
-
+const currentYear = new Date().getFullYear();
 document.getElementById("currentYear").innerHTML = currentYear;
-
-
+// mobile only 
+const mobileView = window.matchMedia ("(min-width: 992px)");
+if (mobileView.matches) {
+  window.addEventListener("scroll", function() {showFunction()});
+  function showFunction() {
+    if (document.body.scrollTop > 200 || document.documentElement.scrollTop > 200) {
+      document.querySelector(".socialBar").style.display = "flex";
+    } else {
+      document.querySelector(".socialBar").style.display = "none";
+    }
+}
+}
