@@ -169,14 +169,22 @@ window.onload = function() {
 const currentYear = new Date().getFullYear();
 document.getElementById("currentYear").innerHTML = currentYear;
 // mobile only 
-const mobileView = window.matchMedia ("(min-width: 992px)");
-if (mobileView.matches) {
-  window.addEventListener("scroll", function() {showFunction()});
-  function showFunction() {
-    if (document.body.scrollTop > 200 || document.documentElement.scrollTop > 200) {
-      document.querySelector(".socialBar").style.display = "flex";
-    } else {
-      document.querySelector(".socialBar").style.display = "none";
-    }
-}
+// const mobileView = window.matchMedia ("(min-width: 20px) and (max-width: 992px)");
+// if (mobileView.matches) {
+//   window.addEventListener("scroll", function() {showFunction()});
+//   function showFunction() {
+//     if (document.body.scrollTop > 50 || document.documentElement.scrollTop > 50) {
+//       document.querySelector(".socialBar").style.display = "flex";
+//     } else {
+//       document.querySelector(".socialBar").style.display = "none";
+//     }
+// }
+// }
+window.addEventListener("scroll", function() {showFunction()});
+function showFunction() {
+  if (document.body.scrollTop > 50 || document.documentElement.scrollTop > 50) {
+    document.querySelector(".socialBar").style.display = "flex";
+  } else {
+    document.querySelector(".socialBar").style.display = "none";
+  }
 }

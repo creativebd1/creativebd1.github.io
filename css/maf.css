@@ -347,6 +347,7 @@ html, body {
   display: block; }
 
 .socialBar {
+  display: none;
   right: 0;
   position: fixed;
   top: 30%; }
@@ -394,6 +395,7 @@ html, body {
     padding-bottom: 80px; }
 
   .socialBar {
+    display: none;
     bottom: 0;
     width: 100%;
     top: auto;
