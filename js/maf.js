@@ -18,8 +18,9 @@ let typed3 = new Typed('#typed', {
   typeSpeed: 40,
   backSpeed: 40,
   smartBackspace: true, // this is a default
-  loop: true
-  });
+  loop: true,
+  showCursor: false,
+});
 
 // Filtered Gallery
 filterSelection("all") // Execute the function and show all columns
