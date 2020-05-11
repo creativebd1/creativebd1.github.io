@@ -223,6 +223,9 @@ html, body {
     font-size: 1.3em;
     font-weight: 200;
     line-height: 1.9; }
+    .hmLandContent article #typed {
+      font-size: 1.5em;
+      font-weight: 400; }
   .hmLandContent a {
     text-decoration: none;
     color: #F2F2F2;

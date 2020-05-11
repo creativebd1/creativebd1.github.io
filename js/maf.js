@@ -12,6 +12,15 @@ $('.navLink').on('click', function(){
   $(".burger").removeClass("burgerActive");
   $(".navItems").removeClass("navOpen");
 });
+// Typed content
+let typed3 = new Typed('#typed', {
+  strings: ['Graphics Designer', 'Virtual Assistant', 'Data Entry Specialist'],
+  typeSpeed: 40,
+  backSpeed: 40,
+  smartBackspace: true, // this is a default
+  loop: true
+  });
+
 // Filtered Gallery
 filterSelection("all") // Execute the function and show all columns
 function filterSelection(c) {
@@ -167,19 +176,8 @@ window.onload = function() {
 }
 // Dynamic Date 
 const currentYear = new Date().getFullYear();
-document.getElementById("currentYear").innerHTML = currentYear;
-// mobile only 
-// const mobileView = window.matchMedia ("(min-width: 20px) and (max-width: 992px)");
-// if (mobileView.matches) {
-//   window.addEventListener("scroll", function() {showFunction()});
-//   function showFunction() {
-//     if (document.body.scrollTop > 50 || document.documentElement.scrollTop > 50) {
-//       document.querySelector(".socialBar").style.display = "flex";
-//     } else {
-//       document.querySelector(".socialBar").style.display = "none";
-//     }
-// }
-// }
+document.getElementById("currentYear").textContent = currentYear;
+
 window.addEventListener("scroll", function() {showFunction()});
 function showFunction() {
   if (document.body.scrollTop > 50 || document.documentElement.scrollTop > 50) {
@@ -188,3 +186,4 @@ function showFunction() {
     document.querySelector(".socialBar").style.display = "none";
   }
 }
+
